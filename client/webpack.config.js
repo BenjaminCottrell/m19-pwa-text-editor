@@ -31,10 +31,10 @@ module.exports = () => {
         description: 'Another text editor',
         background_color: '#225ca3',
         theme_color: '#225ca3',
-        fingerprints: false,
-        inject: true,
         start_url: './',
         publicPath: './',
+        fingerprints: false,
+        inject: true,
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -62,6 +62,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
         },
